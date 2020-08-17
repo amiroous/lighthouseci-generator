@@ -1,0 +1,27 @@
+{
+    "name": "lighthouseci-generator",
+    "version": "1.0.0",
+    "description": "Lighthouse CI Generator",
+    "main": "index.js",
+    "scripts": {
+        "generate-env": "hygen lhci generate-env",
+        "generate-config": "hygen lhci generate-config",
+        "run-test": "lhci autorun"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:amiroous/lighthouseci-generator.git"
+    },
+    "author": "Amir Mirsheakri",
+    "license": "ISC",
+    "devDependencies": {
+        "@lhci/cli": "^0.4.4",
+        "@lhci/server": "^0.4.4",
+        "dotenv": "^8.2.0",
+        "hygen": "^6.0.4",
+        "puppeteer": "^5.2.1",
+        "sqlite3": "^5.0.0",
+        "uuid": "^8.3.0",
+        "validate.js": "^0.13.1"
+    }
+}
