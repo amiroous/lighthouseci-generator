@@ -12,9 +12,9 @@
         "type": "git",
         "url": "ssh://git@github.com:amiroous/lighthouseci-generator.git"
     },
-    "author": "Amir Mirsheakri",
+    "author": "Amir Mirshekari",
     "license": "ISC",
-    "devDependencies": {
+    "dependencies": {
         "@lhci/cli": "^0.4.4",
         "@lhci/server": "^0.4.4",
         "dotenv": "^8.2.0",
