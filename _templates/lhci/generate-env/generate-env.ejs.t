@@ -1,5 +1,5 @@
 ---
-to: .env
+to: <%= process.cwd() %>/.env
 ---
 # Test Targets
 BASE_URL="<%= baseUrl %>"
