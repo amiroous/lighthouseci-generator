@@ -1,5 +1,5 @@
 ---
-to: <%= process.cwd() %>/.env
+to: ../../lhci/.lhci
 ---
 # Test Targets
 BASE_URL="<%= baseUrl %>"

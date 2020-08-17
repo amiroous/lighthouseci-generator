@@ -1,5 +1,4 @@
-const validate = require("validate.js");
-const env = require('dotenv').config({ path: process.cwd() + '/.env' }).parsed;
+const env = require('dotenv').config({ path: process.cwd() + '/.lhci' }).parsed;
 
 const prompts = [
     {

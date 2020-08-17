@@ -1,5 +1,5 @@
 ---
-to: <%= process.cwd() %>/.lighthouserc.js
+to: ../../lhci/.lighthouserc.js
 force: true
 ---
 const ENV = require('dotenv').config({ path: process.cwd() + '/.env' }).parsed;
