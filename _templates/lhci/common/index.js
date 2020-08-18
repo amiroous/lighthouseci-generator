@@ -1,6 +1,7 @@
 const path = require('path');
 const projectDirPath = path.resolve(__dirname).split('/node_modules')[0];
-const lhciDirPath = projectDirPath + '/lhci';
+const lhciDir = '/lhci';
+const lhciDirPath = projectDirPath + lhciDir;
 
 const projectDirPrompt = {
     type: 'input',
@@ -22,6 +23,7 @@ const lhciDirPrompt = {
 
 module.exports = {
     projectDirPath,
+    lhciDir,
     lhciDirPath,
     projectDirPrompt,
     lhciDirPrompt
