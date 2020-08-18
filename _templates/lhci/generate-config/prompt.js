@@ -1,4 +1,5 @@
-const env = require('dotenv').config({ path: '../../lhci/.lhci' }).parsed;
+const common = require('../common');
+const env = require('dotenv').config({ path: common.lhciDirPath + '/.lhci' }).parsed;
 
 const prompts = [
     {
@@ -69,7 +70,8 @@ const hiddenPrompts = [
         name: 'signInRequired',
         initial: env.USERNAME && env.PASSWORD,
         skip: true
-    }
+    },
+    ...common.lhciDirPrompt
 ];
 
 

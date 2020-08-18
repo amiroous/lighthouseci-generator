@@ -1,6 +1,6 @@
 const validate = require("validate.js");
 const { v4: uuidv4 } = require('uuid');
-
+const common = require('../common');
 
 const promptEnv = {
 
@@ -89,6 +89,7 @@ const promptEnv = {
                     },
                     skip: true
                 },
+                ...common.lhciDirPrompt
             ];
 
             return prompter.prompt([promptUsername, promptPassword, ...otherQuestions]);
