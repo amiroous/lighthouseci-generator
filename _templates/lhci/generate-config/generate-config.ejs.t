@@ -2,7 +2,7 @@
 to: ../../lhci/.lighthouserc.js
 force: true
 ---
-const ENV = require('dotenv').config({ path: process.cwd() + '/.env' }).parsed;
+const ENV = lhciEnv;
 const testPaths = ENV.TEST_PATHS.split(",");
 const testUrls = [...testPaths].reduce((acc, path) => [...acc, ENV.BASE_URL + path], []);
 

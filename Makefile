@@ -19,18 +19,17 @@ endef
 
 
 install:
-	$(call SHOW_INFO, "Installing Node Module Dependencies")
 	@yarn install
 
 generate-env:
-	$(call SHOW_INFO, "Generating Environment Variable File (.env)")
-	@yarn run create-env
+	@yarn run generate-env
 
 generate-config:
-	$(call SHOW_INFO, "Generating Lighthouse CI Config File (.lighthouserc.js)")
-	@yarn run create-config
+	@yarn run generate-config
 
-build: install generate-env generate-config
+build:
+	$(call SHOW_INFO, "Building Lighthouse CI Tools in '<PROJECT_ROOT>/lhci' Folder")
+	make install && make generate-env && make generate-config
 
 run:
 	$(call SHOW_SUCCESS, "Running Lighthouse CI Test")

@@ -1,4 +1,4 @@
-const env = require('dotenv').config({ path: process.cwd() + '/.lhci' }).parsed;
+const env = require('dotenv').config({ path: '../../lhci/.lhci' }).parsed;
 
 const prompts = [
     {
@@ -70,7 +70,15 @@ const hiddenPrompts = [
         initial: env.USERNAME && env.PASSWORD,
         skip: true
     },
+    {
+        type: 'input',
+        name: 'lhciEnv',
+        initial: env,
+        skip: true
+    },
 ];
+
+console.log(hiddenPrompts);
 
 
 module.exports = [
