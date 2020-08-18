@@ -69,16 +69,8 @@ const hiddenPrompts = [
         name: 'signInRequired',
         initial: env.USERNAME && env.PASSWORD,
         skip: true
-    },
-    {
-        type: 'input',
-        name: 'lhciEnv',
-        initial: env,
-        skip: true
-    },
+    }
 ];
-
-console.log(hiddenPrompts);
 
 
 module.exports = [
