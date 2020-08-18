@@ -6,7 +6,8 @@
     "scripts": {
         "generate-env": "hygen lhci generate-env",
         "generate-config": "hygen lhci generate-config",
-        "run-test": "lhci autorun"
+        "build": "npm run generate-env && npm run generate-config",
+        "start": "lhci autorun --config=./lhci/.lighthouserc.js"
     },
     "repository": {
         "type": "git",
