@@ -89,7 +89,7 @@ const promptEnv = {
                     },
                     skip: true
                 },
-                common.lhciDirPrompt
+                common.lhciDirRelPrompt
             ];
 
             return prompter.prompt([promptUsername, promptPassword, ...otherQuestions]);

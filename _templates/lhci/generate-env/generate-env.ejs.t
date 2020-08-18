@@ -1,5 +1,5 @@
 ---
-to: <%= lhciDirPath %>/.lhci
+to: <%= lhciDirRelPath %>/.lhci
 ---
 # Test Targets
 BASE_URL="<%= baseUrl %>"
