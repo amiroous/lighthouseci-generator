@@ -18,6 +18,12 @@ module.exports = {
                 headless: <%= !isHeadful %>
             },
             <%_ } _%>
+            <%_ if(appType === "dynamic") { _%>
+            isSinglePageApplication: true,
+            <%_ } _%>
+            <%_ if(startServerCommand) { _%>
+            startServerCommand: "<%= startServerCommand %>",
+            <%_ } _%>
             headful: <%= isHeadful %>,
             settings: {
                 budgetsPath: "budget.json",
