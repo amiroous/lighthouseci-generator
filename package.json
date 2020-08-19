@@ -1,13 +1,10 @@
 {
     "name": "lighthouseci-generator",
     "version": "1.0.0",
+    "private": true,
     "description": "Lighthouse CI Generator",
     "main": "index.js",
     "scripts": {
-        "preinstall": "echo ===> preinstall",
-        "install": "echo ===> install",
-        "postinstall": "echo ===> postinstall",
-        "prestart": "echo ===> prestart",
         "generate-package-json": "hygen lhci generate-package-json",
         "generate-env": "hygen lhci generate-env",
         "generate-config": "hygen lhci generate-config",
