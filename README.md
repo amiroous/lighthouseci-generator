@@ -16,6 +16,7 @@
 
 2. Install Your Application Dependencies
     - Open Terminal in Your Application Root and Run `npm install`
+        + If you have more build steps like docker setups, make sure you still follow your app build process
    
 3. Generate LHCI Files
     - In Terminal Run `npm run lhci:build`

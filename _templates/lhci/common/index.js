@@ -4,7 +4,7 @@ const path = require('path');
 const projectDirPath = path.resolve(process.cwd());
 
 // Absolute Path to This Package
-const packageDirPath = path.resolve();
+const packageDirPath = path.join(projectDirPath, "node_modules/lighthouseci-generator");
 
 // Relative Path from this Package to the Main Project
 const packageToProjectRelPath = path.relative(packageDirPath, projectDirPath);
