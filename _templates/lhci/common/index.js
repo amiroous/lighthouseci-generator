@@ -26,6 +26,7 @@ const lhciDirRelPrompt = {
 };
 
 module.exports = {
+    packageToProjectRelPath,
     lhciDirRelPath,
     lhciDirRelPrompt
 };
