@@ -6,3 +6,4 @@ skip_if: lhci:build
 ---
 "lhci:build": "npm explore lighthouseci-generator -- npm run build",
 "lhci:run": "npm explore lighthouseci-generator -- npm run",
+"start": "lhci autorun --config=<%= lhciDirRelPath %>/.lighthouserc.js"

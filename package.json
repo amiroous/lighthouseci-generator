@@ -4,11 +4,12 @@
     "description": "Lighthouse CI Generator",
     "main": "index.js",
     "scripts": {
+        "preinstall": "hygen lhci generate-env",
+        "postinstall": "",
         "generate-package-json": "hygen lhci generate-package-json",
-        "generate-env": "hygen lhci generate-env",
         "generate-config": "hygen lhci generate-config",
         "build": "npm run generate-env && npm run generate-config",
-        "run": "lhci autorun"
+        "start": "lhci autorun --config=./lhci/.lighthouserc.js"
     },
     "repository": {
         "type": "git",

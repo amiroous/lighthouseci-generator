@@ -1,7 +1,7 @@
 const path = require('path');
 
 // Absolute Path to the Main Project (Consumer of This Package)
-const projectDirPath = path.resolve(__dirname).split('/node_modules')[0];
+const projectDirPath = path.resolve(process.cwd());
 
 // Absolute Path to This Package
 const packageDirPath = path.resolve();

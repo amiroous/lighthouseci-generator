@@ -23,6 +23,6 @@ const sh =(command, color = NO_COLOR) => {
 
 module.exports = (() => {
 
-    sh("echo 'Installing Lighthouse CI Generator'", INFO_COLOR);
+    sh("echo 'Lighthouse CI Generator'", INFO_COLOR);
 
 })();

@@ -44,7 +44,8 @@ const promptEnv = {
                                 }
                             }
                         });
-                    }
+                    },
+                    initial: "https://qa1-www.rakuten.com" // TODO: Remove Me
                 },
                 {
                     type: 'list',
@@ -64,13 +65,14 @@ const promptEnv = {
                                 }
                             }
                         });
-                    }
+                    },
+                    initial: "https://lhci-server.acquisition-np.rr-it.com/" // TODO: Remove Me
                 },
                 {
                     type: 'input',
                     name: 'serverPort',
                     message: "Enter Server Port (Optional):",
-                    initial: "",
+                    initial: "9001",
                 },
                 {
                     type: 'input',
@@ -79,6 +81,7 @@ const promptEnv = {
                     validate(value) {
                         return !validate.isEmpty(value);
                     },
+                    initial: "8f29751a-ed07-4af6-943c-4793218a2972" // TODO: Remove Me
                 },
                 {
                     type: 'input',
