@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/amirshekari/.nvm/versions/node/v14.2.0/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js install
+  /Users/amirshekari/.nvm/versions/node/v14.2.0/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js
 
 PATH: 
   /usr/local/opt/python@3.8/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/usr/local/opt/postgresql@10/bin:/Users/amirshekari/.nvm/versions/node/v14.2.0/bin:/Users/amirshekari/.pyenv/shims:/Users/amirshekari/.pyenv/bin:/Users/amirshekari/.jenv/shims:/Users/amirshekari/.rbenv/shims:/usr/local/Cellar/v8/7.1.302.28/bin/d8:/usr/local/opt/php@7.0/sbin:/usr/local/opt/php@7.0/bin:/Users/amirshekari:/usr/local/bin:/usr/local/sbin:/usr/sbin:/bin:/Users/amirshekari/.composer/vendor/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/bin:/Users/amirshekari/.local/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/amirshekari/www/github/lighthouseci-generator/package.json: Unexpected token m in JSON at position 752
+  SyntaxError: /Users/amirshekari/www/github/lighthouseci-generator/package.json: Unexpected string in JSON at position 350
       at JSON.parse (<anonymous>)
       at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -28,17 +28,25 @@ npm manifest:
       "description": "Lighthouse CI Generator",
       "main": "index.js",
       "scripts": {
+  "lhci:build": "npm explore lighthouseci-generator -- npm run build",
+  "lhci:run": "npm explore lighthouseci-generator -- npm run",
+  "lhci:start": "lhci autorun --config=lhci/.lighthouserc.js"
+  
+          "preinstall": "node index.js",
+          "postinstall": "hygen lhci generate-package-json",
+          "generate-package-json": "hygen lhci generate-package-json",
           "generate-env": "hygen lhci generate-env",
           "generate-config": "hygen lhci generate-config",
-          "run-test": "lhci autorun"
+          "build": "npm run generate-env && npm run generate-config",
+          "start": "lhci autorun --config=./lhci/.lighthouserc.js"
       },
       "repository": {
           "type": "git",
           "url": "ssh://git@github.com:amiroous/lighthouseci-generator.git"
       },
-      "author": "Amir Mirsheakri",
+      "author": "Amir Mirshekari",
       "license": "ISC",
-      "devDependencies": {
+      "dependencies": {
           "@lhci/cli": "^0.4.4",
           "@lhci/server": "^0.4.4",
           "dotenv": "^8.2.0",
@@ -49,7 +57,6 @@ npm manifest:
           "validate.js": "^0.13.1"
       }
   }
-  make in
 
 yarn manifest: 
   No manifest
