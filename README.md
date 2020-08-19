@@ -31,3 +31,4 @@
 - If you select `Dynamic App` as your application type, 
     you'll be asked to enter a __start server command__ which basically 
     will setup a temporary server on the host machine and then runs the test. 
+
