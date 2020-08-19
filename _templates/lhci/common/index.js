@@ -25,8 +25,17 @@ const lhciDirRelPrompt = {
     skip: true
 };
 
+const packageToProjectRelPrompt = {
+    type: 'input',
+    name: 'packageToProjectRelPath',
+    result() {
+        return packageToProjectRelPath;
+    },
+    skip: true
+};
+
 module.exports = {
-    packageToProjectRelPath,
+    packageToProjectRelPrompt,
     lhciDirRelPath,
     lhciDirRelPrompt
 };
