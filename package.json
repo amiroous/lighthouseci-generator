@@ -4,8 +4,8 @@
     "description": "Lighthouse CI Generator",
     "main": "index.js",
     "scripts": {
-        "preinstall": "hygen lhci generate-env",
-        "postinstall": "",
+        "preinstall": "node index.js",
+        "postinstall": "hygen lhci generate-package-json",
         "generate-package-json": "hygen lhci generate-package-json",
         "generate-config": "hygen lhci generate-config",
         "build": "npm run generate-env && npm run generate-config",
